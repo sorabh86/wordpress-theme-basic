@@ -1,6 +1,6 @@
 *
-
-!*/wp-content/themes/sos-basic/*
+!wp-config.php
+!wp-content/themes/sos-basic
 !.gitignore
 !README.md
 
