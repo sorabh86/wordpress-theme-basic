@@ -155,6 +155,46 @@ body {
 	margin: 20px 0;
 }
 
+#respond form p {
+	margin-bottom: 15px;
+}
+#respond form p.form-submit {
+	margin-bottom: 0;
+}
+#respond textarea {
+	width: 100%;
+	padding: 15px;
+}
+.comment-reply-title {
+	margin: 20px 0;
+}
+.submit {
+	padding: 5px 20px;
+}
+
+.sos-comments {
+	border-radius: 15px;
+	padding: 15px;
+	background: #eee;
+	margin-bottom: 15px;
+}
+.sos-comments h3 {
+	margin: 10px 0;
+}
+.commentlist {
+	margin: 20px;
+	padding-left: 15px;
+}
+.commentlist li {
+	margin-bottom: 10px;
+}
+.comment-body p {
+	padding: 15px;
+	border-radius: 15px;
+	background: #fff;
+	margin: 5px 0;
+}
+
  footer{
 	background: #310;
 	color: #898;

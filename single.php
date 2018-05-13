@@ -20,6 +20,10 @@
 		<?php else : ?>
 			<?php echo wpautop('Sorry, No Posts were found'); ?>
 		<?php endif; ?>
+		
+		<div class="sos-comments">
+			<?php comments_template(); ?>
+		</div>
 	</div>
 </div>
 
