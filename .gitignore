@@ -8,5 +8,8 @@
 /wp-content/*
 !/wp-content/themes
 /wp-content/themes/*
+!/wp-content/plugins
+/wp-content/plugins/*
+!/wp-content/plugins/sos_filter
 !/wp-content/themes/sos-basic
 !/wp-content/themes/sos-advance
