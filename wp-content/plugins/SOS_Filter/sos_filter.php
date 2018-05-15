@@ -9,6 +9,11 @@
 	Version: 1.0
 */
 
+/*
+	This plugin used for understanding to Wordpress Hooks.
+	Hooks are used to inject your code into wordpress, or filter wordpress methods returns values based on your logic.
+*/
+
 // add_filter or remove_filter to hook something for modify something
 	/*add_filter( 'the_title', function($content){
 		return 'SOS '.ucwords($content);
