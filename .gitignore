@@ -12,6 +12,7 @@
 !/wp-content/plugins
 /wp-content/plugins/*
 !/wp-content/plugins/sos_filter
+!/wp-content/plugins/sos_messager_widget
 !/wp-content/plugins/sos_twitter_shortcode
 !/wp-content/themes/sos-basic
 !/wp-content/themes/sos-advance
