@@ -24,13 +24,34 @@ class SOS_Messager extends WP_Widget {
 	}
 
 	// responsible for display form in admin area
-	public function form() {
-
+	public function form($instance) {
+		extract($instance);
+		?>
+			<p>
+				<label for="<?= $this->get_field_id('title') ?>">Title:</label>
+				<input class="widefat" id="<?= $this->get_field_id('title') ?>" type="text" name="<?= $this->get_field_name('title') ?>" value="<?php if(isset($title)) echo esc_attr( $title ); ?>">
+			</p>
+			<p>
+				<label for="<?= $this->get_field_id('title') ?>">Description:</label>
+				<textarea class="widefat" id="<?= $this->get_field_id('title') ?>"
+					name="<?= $this->get_field_name('description') ?>"
+					rows="10"><?php if(isset($description)) echo esc_attr( $description ); ?></textarea>
+			</p>
+		<?php
 	}
 
 	// responsible for display widget on site level
-	public function widget() {
+	public function widget($args, $instance) {
+		extract($args);
+		extract($instance);
 
+		$title = apply_filters( 'widget_title', $title );
+		$description = apply_filters( 'widget_description', $description );
+
+		echo $before_widget;
+			echo $before_title . $title . $after_title;
+			echo "<p>$description</p>";
+		echo $after_widget;
 	}
 }
 
