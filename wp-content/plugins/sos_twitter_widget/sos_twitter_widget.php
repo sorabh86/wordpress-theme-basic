@@ -21,8 +21,23 @@ class SOS_Twitter_Widget extends WP_Widget {
 		parent::__construct('SOS_Twitter_Widget', '', $arg);
 	}
 
-	public function form() {
-
+	public function form($instance) {
+		extract($instance);
+		?>
+		<p>
+			<label for="<?= $this->get_field_id('title') ?>">Title:</label>
+			<input class="widefat" id="<?= $this->get_field_id('title') ?>" name="<?= $this->get_field_name('title') ?>" type="text" value="<?php if(isset($title)) echo esc_attr( $title ); ?>">
+		</p>
+		<p>
+			<label for="<?= $this->get_field_id('username') ?>">Twitter Username:</label>
+			<input class="widefat" id="<?= $this->get_field_id('username') ?>" name="<?= $this->get_field_name('username') ?>" type="text" value="<?php if(isset($username)) echo esc_attr( $username ); ?>">
+		</p>
+		<p>
+			<label for="<?= $this->get_field_id('tweet_count') ?>">Number of Tweets to Retrive:</label>
+			<input class="widefat" id="<?= $this->get_field_id('tweet_count') ?>" name="<?= $this->get_field_name('tweet_count') ?>" type="number" style="width:40px" min="1" max="40" value="<?php echo !empty($tweet_count) ? esc_attr( $tweet_count) : 5; ?>">
+		</p>
+		
+		<?php
 	}
 
 	public function widget() {
